@@ -211,11 +211,11 @@ The examples below reproduce the handwritten exercises and retain continuous-val
 Monthly demand follows $N(28,8^2)$. With 12 months per year and fixed lead time $L=14/52$ years:
 
 ```math
-\begin{aligned}
-D &= 28\times12=336,\\
-\{Var}(D) &= 12\times8^2=768,\\
-\theta &= DL=336\times\frac{14}{52}=\frac{1176}{13},\\
-\{Var}(X) &=768\times\frac{14}{52}=\frac{2688}{13}.
+\begin{aligned} 
+E[D] &= 28 \times 12 = 336 \\ 
+Var(D) &= 12 \times 8^2 = 768 \\ 
+E[X] &= 336 \times \frac{14}{52} = \frac{1176}{13} \\ 
+Var(X) &= 768 \times \frac{14}{52} = \frac{2688}{13} 
 \end{aligned}
 ```
 
@@ -237,7 +237,7 @@ h=iv=1.8,\qquad Q_0=\sqrt{\frac{2(336)(15)}{1.8}}=20\sqrt{14}
 Demand follows $N(100,3^2)$ per period. With $L=2$ periods:
 
 ```math
-\theta=200,\qquad \{Var}(X)=18,\qquad\sigma_X=\sqrt{18}
+\theta = 200, \qquad \operatorname{Var}(X) = 18, \qquad \sigma_X = \sqrt{18}
 ```
 
 Given $A=200$, $v=40$, $i=0.10$, and $p=30$:
