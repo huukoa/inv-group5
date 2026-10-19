@@ -237,7 +237,7 @@ h=iv=1.8,\qquad Q_0=\sqrt{\frac{2(336)(15)}{1.8}}=20\sqrt{14}
 Demand follows $N(100,3^2)$ per period. With $L=2$ periods:
 
 ```math
-\theta = 200, \qquad \operatorname{Var}(X) = 18, \qquad \sigma_X = \sqrt{18}
+\theta = 200, \qquad \text{Var}(X) = 18, \qquad \sigma_X = \sqrt{18}
 ```
 
 Given $A=200$, $v=40$, $i=0.10$, and $p=30$:
