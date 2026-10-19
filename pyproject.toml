@@ -1,0 +1,41 @@
+[build-system]
+requires = ["hatchling>=1.20"]
+build-backend = "hatchling.build"
+
+[project]
+name = "inventory-sq-iterative"
+version = "0.1.0"
+description = "Educational (s,Q) iterative optimizer for stochastic demand and fixed lead time"
+readme = "README.md"
+license = { text = "AGPL-3.0-or-later" }
+requires-python = ">=3.11"
+dependencies = ["scipy>=1.11"]
+
+[project.optional-dependencies]
+ui = ["streamlit>=1.32", "pandas>=2.0", "openpyxl>=3.1", "plotly>=5.20", "sympy>=1.12"]
+dev = ["pytest>=8", "pytest-cov>=5", "ruff>=0.6", "ty>=0.0.1a20", "basedpyright>=1.20"]
+
+[project.scripts]
+inventory-sq = "inventory_sq.cli:main"
+
+[tool.hatch.build.targets.wheel]
+packages = ["inventory_sq"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+pythonpath = ["src"]
+addopts = "-ra"
+
+[tool.ruff]
+target-version = "py311"
+line-length = 100
+
+[tool.ruff.lint]
+select = ["E", "F", "I", "B", "UP"]
+
+[tool.coverage.run]
+branch = true
+source = ["inventory_sq"]
+
+[tool.coverage.report]
+show_missing = true
